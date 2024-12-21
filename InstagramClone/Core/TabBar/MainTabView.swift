@@ -12,32 +12,30 @@ struct MainTabView: View {
         TabView {
             Text("Home")
                 .tabItem {
-                    Image("home")
+                    Image(systemName: "house")
                 }
             
             Text("Search")
                 .tabItem {
-                    Image("search")
+                    Image(systemName: "magnifyingglass")
                 }
             
             Text("Upload")
                 .tabItem {
-                    Image("upload")
+                    Image(systemName: "plus.square")
                 }
             
             Text("reels")
                 .tabItem {
-                    Image("reels")
+                    Image(systemName: "play.tv")
                 }
             
             Text("account")
                 .tabItem {
-                    Image("ruffles")
-                        .resizable()
-                        .frame(width: 21, height: 21)
-                        .cornerRadius(50)
+                    Image(systemName: "person")
                 }
         }
+        .accentColor(.black)
     }
 }
 
