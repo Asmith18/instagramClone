@@ -80,7 +80,7 @@ struct FeedCell: View {
             // caption label
             
             HStack {
-                Text("\(post.user?.username ?? "")").fontWeight(.semibold) +
+                Text("\(post.user?.username ?? "") ").fontWeight(.semibold) +
                 Text(post.caption)
             }
             .frame(maxWidth: .infinity, alignment: .leading)

@@ -79,13 +79,13 @@ struct ProfileView: View {
                 // post grid view
                 LazyVGrid(columns: gridItems, spacing: 1) {
                     ForEach(0 ... 15, id: \.self) { index in
-                        Image("ruffles")
+                        Image(user.profileImageName ?? "")
                             .resizable()
                             .scaledToFill()
                     }
                 }
             }
-            .navigationTitle("Profile")
+            .navigationTitle(user.username)
             .navigationBarTitleDisplayMode(.inline)
     }
 }

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CurrentUserProfileView: View {
     
+    var user: User
+    
     private let gridItems: [GridItem] = [
         .init(.flexible(), spacing: 1),
         .init(.flexible(), spacing: 1),
@@ -22,7 +24,7 @@ struct CurrentUserProfileView: View {
                 VStack(spacing: 10) {
                     // pic and stats
                     HStack {
-                        Image("ruffles")
+                        Image(user.profileImageName ?? "")
                             .resizable()
                             .scaledToFill()
                             .frame(width: 80, height: 80)
@@ -46,11 +48,15 @@ struct CurrentUserProfileView: View {
                     
                     // name and bio
                     VStack(alignment: .leading) {
-                        Text("Chadwick Boseman")
-                            .font(.footnote)
-                            .fontWeight(.semibold)
-                        Text("Wakanda Forever")
-                            .font(.footnote)
+                        if let fullName = user.fullName {
+                            Text(fullName)
+                                .font(.footnote)
+                                .fontWeight(.semibold)
+                        }
+                        if let bio = user.bio {
+                            Text(bio)
+                                .font(.footnote)
+                        }
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal)
@@ -74,13 +80,13 @@ struct CurrentUserProfileView: View {
                 // post grid view
                 LazyVGrid(columns: gridItems, spacing: 1) {
                     ForEach(0 ... 15, id: \.self) { index in
-                        Image("ruffles")
+                        Image(user.profileImageName ?? "")
                             .resizable()
                             .scaledToFill()
                     }
                 }
             }
-            .navigationTitle("Profile")
+            .navigationTitle(user.username)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -97,5 +103,5 @@ struct CurrentUserProfileView: View {
 }
 
 #Preview {
-    CurrentUserProfileView()
+    CurrentUserProfileView(user: User.MOCK_USERS[0])
 }

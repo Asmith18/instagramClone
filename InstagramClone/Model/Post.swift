@@ -22,7 +22,7 @@ extension Post {
         .init(
             id: NSUUID().uuidString,
             ownerUid: NSUUID().uuidString,
-            caption: "Caption 1",
+            caption: "I love Ruffles!",
             likes: 100,
             imageUrl: "ruffles",
             timestamp: Date(),
@@ -30,33 +30,25 @@ extension Post {
         .init(
             id: NSUUID().uuidString,
             ownerUid: NSUUID().uuidString,
-            caption: "Caption 2",
-            likes: 200, imageUrl: "ruffles",
+            caption: "Just bought the worst revulto lamborghini produced...",
+            likes: 200, imageUrl: "revulto",
             timestamp: Date(),
             user: User.MOCK_USERS[1]),
         .init(
             id: NSUUID().uuidString,
             ownerUid: NSUUID().uuidString,
-            caption: "Caption 3",
+            caption: "I love my new f-40!",
             likes: 300,
-            imageUrl: "ruffles",
+            imageUrl: "ron",
             timestamp: Date(),
             user: User.MOCK_USERS[2]),
         .init(
             id: NSUUID().uuidString,
             ownerUid: NSUUID().uuidString,
-            caption: "Caption 4",
+            caption: "Cant wait to get back on the track!",
             likes: 400,
-            imageUrl: "ruffles",
+            imageUrl: "adamlz",
             timestamp: Date(),
-            user: User.MOCK_USERS[3]),
-        .init(
-            id: NSUUID().uuidString,
-            ownerUid: NSUUID().uuidString,
-            caption: "Caption 5",
-            likes: 500,
-            imageUrl: "ruffles",
-            timestamp: Date(),
-            user: User.MOCK_USERS[3]),
+            user: User.MOCK_USERS[3])
     ]
 }

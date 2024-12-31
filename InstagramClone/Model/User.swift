@@ -18,10 +18,10 @@ struct User: Identifiable, Hashable, Codable {
 
 extension User {
     static var MOCK_USERS: [User] = [
-        .init(id: NSUUID().uuidString, username: "Adam", profileImageName: "ruffles", fullName: "Adam Smith", bio: "Hello World", email: "adam@gmail.com"),
-        .init(id: NSUUID().uuidString, username: "Ed Bolian", profileImageName: "revulto", fullName: "", bio: "Founder of VinWiki", email: "BigEd@gmail.com"),
-        .init(id: NSUUID().uuidString, username: "Adam", profileImageName: "ruffles", fullName: "Adam Smith", bio: "Hello World", email: "adam@gmail.com"),
-        .init(id: NSUUID().uuidString, username: "Adam", profileImageName: "ruffles", fullName: "Adam Smith", bio: "Hello World", email: "adam@gmail.com"),
+        .init(id: NSUUID().uuidString, username: "loser432456", profileImageName: "ruffles", fullName: "Adam Smith", bio: "Hello World im a loser!", email: "adam@gmail.com"),
+        .init(id: NSUUID().uuidString, username: "Ed Bolian", profileImageName: "revulto", fullName: "Ed", bio: "Founder of VinWiki", email: "BigEd@gmail.com"),
+        .init(id: NSUUID().uuidString, username: "Supercar_Ron", profileImageName: "ron", fullName: "Ron", bio: "Supercar Collector", email: "Ron@gmail.com"),
+        .init(id: NSUUID().uuidString, username: "Adam LZ", profileImageName: "adamlz", fullName: "Adam", bio: "Best Drifter in the world!", email: "adamlz@gmail.com"),
     ]
 }
 
