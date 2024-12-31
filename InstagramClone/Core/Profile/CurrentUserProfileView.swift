@@ -1,15 +1,13 @@
 //
-//  ProfileView.swift
+//  CurrentUserProfileView.swift
 //  InstagramClone
 //
-//  Created by Adam Smith on 12/21/24.
+//  Created by Adam Smith on 12/30/24.
 //
 
 import SwiftUI
 
-struct ProfileView: View {
-    
-    let user: User
+struct CurrentUserProfileView: View {
     
     private let gridItems: [GridItem] = [
         .init(.flexible(), spacing: 1),
@@ -18,12 +16,13 @@ struct ProfileView: View {
     ]
     
     var body: some View {
+        NavigationStack {
             ScrollView {
                 // header
                 VStack(spacing: 10) {
                     // pic and stats
                     HStack {
-                        Image(user.profileImageName ?? "")
+                        Image("ruffles")
                             .resizable()
                             .scaledToFill()
                             .frame(width: 80, height: 80)
@@ -47,15 +46,11 @@ struct ProfileView: View {
                     
                     // name and bio
                     VStack(alignment: .leading) {
-                        if let fullName = user.fullName {
-                            Text(fullName)
-                                .font(.footnote)
-                                .fontWeight(.semibold)
-                        }
-                        if let bio = user.bio {
-                            Text(bio)
-                                .font(.footnote)
-                        }
+                        Text("Chadwick Boseman")
+                            .font(.footnote)
+                            .fontWeight(.semibold)
+                        Text("Wakanda Forever")
+                            .font(.footnote)
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal)
@@ -87,9 +82,20 @@ struct ProfileView: View {
             }
             .navigationTitle("Profile")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "line.3.horizontal")
+                            .foregroundColor(.black)
+                    }
+                }
+            }
+        }
     }
 }
 
 #Preview {
-    ProfileView(user: User.MOCK_USERS[0])
+    CurrentUserProfileView()
 }

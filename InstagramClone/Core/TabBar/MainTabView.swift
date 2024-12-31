@@ -30,7 +30,7 @@ struct MainTabView: View {
                     Image(systemName: "play.tv")
                 }
             
-            ProfileView()
+            CurrentUserProfileView()
                 .tabItem {
                     Image(systemName: "person")
                 }
