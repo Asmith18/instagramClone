@@ -57,6 +57,6 @@ extension Post {
             likes: 500,
             imageUrl: "ruffles",
             timestamp: Date(),
-            user: User.MOCK_USERS[4]),
+            user: User.MOCK_USERS[3]),
     ]
 }
