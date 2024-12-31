@@ -18,21 +18,21 @@ struct Home: View {
                 
                 Divider()
                 
-                Post()
+                OldPost()
                 
-                Post(image: "ruffles", description: "Meet mr. ruffles")
+                OldPost(image: "ruffles", description: "Meet mr. ruffles")
                 
-                Post(image: "ruffles", description: "Meet mr. ruffles")
+                OldPost(image: "ruffles", description: "Meet mr. ruffles")
                 
-                Post(image: "ruffles", description: "Meet mr. ruffles")
+                OldPost(image: "ruffles", description: "Meet mr. ruffles")
                 
-                Post(image: "ruffles", description: "Meet mr. ruffles")
+                OldPost(image: "ruffles", description: "Meet mr. ruffles")
                 
-                Post(image: "ruffles", description: "Meet mr. ruffles")
+                OldPost(image: "ruffles", description: "Meet mr. ruffles")
                 
-                Post(image: "ruffles", description: "Meet mr. ruffles")
+                OldPost(image: "ruffles", description: "Meet mr. ruffles")
                 
-                Post(image: "ruffles", description: "Meet mr. ruffles")
+                OldPost(image: "ruffles", description: "Meet mr. ruffles")
             }
             
             TabBar()
@@ -154,7 +154,7 @@ struct PostContent: View {
     }
 }
 
-struct Post: View {
+struct OldPost: View {
     
     var image: String = "ruffles"
     var description: String = "I miss my puppers"
