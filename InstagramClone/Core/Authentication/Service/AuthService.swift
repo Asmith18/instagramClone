@@ -46,4 +46,8 @@ class AuthService {
         try? Auth.auth().signOut()
         self.userSession = nil
     }
+    
+    private func uploadUserData() async {
+        
+    }
 }
