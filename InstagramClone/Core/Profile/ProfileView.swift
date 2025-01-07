@@ -23,7 +23,7 @@ struct ProfileView: View {
                 // post grid view
                 PostGridView(posts: posts)
             }
-            .navigationTitle(user.username)
+            .navigationTitle("Profile")
             .navigationBarTitleDisplayMode(.inline)
     }
 }
