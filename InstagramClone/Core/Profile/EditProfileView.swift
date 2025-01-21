@@ -12,6 +12,8 @@ struct EditProfileView: View {
     
     @Environment(\.dismiss) var dismiss
     @State private var selectedImage: PhotosPickerItem?
+    @State private var fullname = ""
+    @State private var bio = ""
     
     var body: some View {
         VStack {
@@ -38,7 +40,7 @@ struct EditProfileView: View {
                             .fontWeight(.bold)
                     }
                 }
-                .padding()
+                .padding(.horizontal)
                 
                 Divider()
             }
@@ -56,11 +58,43 @@ struct EditProfileView: View {
                     Text("Edit Profile Picture")
                         .font(.footnote)
                         .fontWeight(.semibold)
+                    
+                    Divider()
                 }
             }
-            
+            .padding(.vertical, 8)
             // edit profile info
+            
+            VStack {
+                EditProfileRowView(title: "Name", placeholder: "Enter your name..", text: $fullname)
+                EditProfileRowView(title: "Bio", placeholder: "Enter your bio..", text: $bio)
+            }
+            
+            Spacer()
         }
+    }
+}
+
+struct EditProfileRowView: View {
+    let title: String
+    let placeholder: String
+    @Binding var text: String
+    
+    var body: some View {
+        
+        HStack {
+            Text(title)
+                .padding(.leading, 8)
+                .frame(width: 100, alignment: .leading)
+            
+            VStack {
+                TextField(placeholder, text: $text)
+                
+                Divider()
+            }
+        }
+        .font(.subheadline)
+        .frame(height: 36)
     }
 }
 
